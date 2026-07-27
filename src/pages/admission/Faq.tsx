@@ -7,6 +7,9 @@ interface FaqItem {
   category: string;
 }
 
+import { FeatureHighlightSection } from '../../components/FeatureHighlightSection';
+
+
 export const Faq: React.FC = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
   const [searchQuery, setSearchQuery] = useState('');
@@ -88,9 +91,12 @@ export const Faq: React.FC = () => {
               )}
             </div>
           ))}
-        </div>
+          
 
+        </div>
+        
       </div>
+      <FeatureHighlightSection />
     </div>
   );
 };
