@@ -12,11 +12,16 @@ import {
   BookOpen, 
   UserCheck, 
   ShieldCheck,
-  Send
+  Send,
+  CheckCircle,
+  AlertCircle
 } from 'lucide-react';
 
 export const Footer: React.FC = () => {
   const [activeCampus, setActiveCampus] = useState<number>(0);
+  const [email, setEmail] = useState<string>('');
+  const [toastMessage, setToastMessage] = useState<string | null>(null);
+  const [emailError, setEmailError] = useState<boolean>(false);
 
   const campuses = [
     {
@@ -74,16 +79,42 @@ export const Footer: React.FC = () => {
     ]
   };
 
+  const handleSubscribe = (e: React.FormEvent) => {
+    e.preventDefault();
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (!email || !emailRegex.test(email)) {
+      setEmailError(true);
+      return;
+    }
+
+    setEmailError(false);
+    setToastMessage("You joined successfully! Welcome to the Pavna community.");
+    setEmail('');
+
+    setTimeout(() => {
+      setToastMessage(null);
+    }, 4000);
+  };
+
   return (
-    <footer className="relative bg-slate-600 text-slate-200 pt-20 pb-12 overflow-hidden border-t-4 border-emerald-500 shadow-[0_-10px_30px_rgba(0,0,0,0.5)]">
+    <footer className="relative bg-slate-900 text-slate-200 pt-20 pb-12 overflow-hidden border-t-4 border-emerald-500 shadow-[0_-10px_30px_rgba(0,0,0,0.5)]">
       
-      {/* Background Glows for Depth Separation */}
+      {/* Toast Notification */}
+      {toastMessage && (
+        <div className="fixed bottom-6 right-6 z-50 flex items-center gap-3 bg-emerald-950 text-white px-5 py-4 rounded-2xl shadow-2xl border border-emerald-500 animate-bounce">
+          <CheckCircle className="w-5 h-5 text-emerald-400 shrink-0" />
+          <p className="text-xs font-semibold">{toastMessage}</p>
+        </div>
+      )}
+
+      {/* Background Glows */}
       <div className="absolute top-0 left-1/3 w-96 h-96 bg-emerald-500/10 rounded-full blur-[140px] pointer-events-none" />
       <div className="absolute bottom-0 right-1/3 w-96 h-96 bg-teal-500/10 rounded-full blur-[140px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
-        {/* TOP ROW: Distinct Contrast Header Banner */}
+        {/* TOP ROW: Header Banner & Newsletter */}
         <div className="grid lg:grid-cols-12 gap-8 pb-16 border-b border-slate-800 items-center">
           <div className="lg:col-span-7 space-y-4">
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-500/15 border border-emerald-400/30 text-emerald-300 text-xs font-bold uppercase tracking-widest">
@@ -103,19 +134,33 @@ export const Footer: React.FC = () => {
               <Mail className="w-4 h-4 text-emerald-400" /> Stay Connected With Us
             </h3>
             <p className="text-xs text-slate-400">Subscribe for school updates, admission alerts & news.</p>
-            <form onSubmit={(e) => e.preventDefault()} className="flex gap-2">
-              <input 
-                type="email" 
-                placeholder="Enter parent email address..." 
-                className="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-2.5 text-xs text-white placeholder-slate-400 focus:outline-none focus:border-emerald-400 transition-colors"
-              />
-              <button 
-                type="submit" 
-                className="bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-black px-4 py-2.5 rounded-xl text-xs uppercase tracking-wider transition-all flex items-center gap-1.5 shrink-0 shadow-md shadow-emerald-500/20"
-              >
-                <span>Join</span>
-                <Send className="w-3.5 h-3.5" />
-              </button>
+            
+            <form onSubmit={handleSubscribe} className="flex flex-col gap-2">
+              <div className="flex gap-2">
+                <input 
+                  type="email" 
+                  value={email}
+                  onChange={(e) => {
+                    setEmail(e.target.value);
+                    if (emailError) setEmailError(false);
+                  }}
+                  placeholder="Enter parent email address..." 
+                  className={`w-full bg-slate-900 border ${emailError ? 'border-red-500' : 'border-slate-700'} rounded-xl px-4 py-2.5 text-xs text-white placeholder-slate-400 focus:outline-none focus:border-emerald-400 transition-colors`}
+                />
+                <button 
+                  type="submit" 
+                  className="bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-black px-5 py-2.5 rounded-xl text-xs uppercase tracking-wider transition-all flex items-center gap-1.5 shrink-0 shadow-md shadow-emerald-500/20 active:scale-95"
+                >
+                  <span>Join</span>
+                  <Send className="w-3.5 h-3.5" />
+                </button>
+              </div>
+              {emailError && (
+                <p className="text-[11px] text-red-400 flex items-center gap-1 mt-0.5">
+                  <AlertCircle className="w-3 h-3 shrink-0" />
+                  Please enter a valid email address.
+                </p>
+              )}
             </form>
           </div>
         </div>
