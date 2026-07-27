@@ -1,75 +1,32 @@
-# React + TypeScript + Vite
+# DETTROIN-INT-Ajay-Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Candidate Information
+* **Full Name:** Maurya Ajay Munnalal
+* **Intern ID:** not provided
+* **Email Address:** ajaymaurya1725@gmail.com
+* **GitHub Username:** https://github.com/ajaymaurya4527
+* **Selected Website:** Pavna International School Aligarh (https://pavnaschoolaligarh.com/)
+* **Live Demo Link:** https://dettroin-int-maurya-ajay-munnalal-w.vercel.app/
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🛠️ Technologies Used
+* **Frontend:**  React.js, TypeScript, Tailwind CSS
+* **Icons & UI:** Lucide React, Framer Motion (for smooth animations)
+* **Deployment:** Vercel
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## ✨ Key Improvements Made
 
-## Expanding the ESLint configuration
+### 1. UI/UX & Visual Aesthetics
+* **Modern Design System:** Replaced the outdated layout with a sleek, modern visual hierarchy, clean typography, and a balanced color palette.
+* **Interactive Elements:** Added subtle hover effects, interactive dynamic cards for school facilities, and smooth transition animations using Framer Motion.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### 2. Responsiveness & Layout
+* **Mobile-First Approach:** Re-architected the layout to ensure complete responsiveness across desktop, tablet, and mobile breakpoints.
+* **Streamlined Navigation:** Created an intuitive, accessible sticky navbar with a responsive mobile drawer menu.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
-```
+### 3. Performance & Optimization
+* **Optimized Assets:** Implemented Next.js image optimization and modern vector icons for faster load speeds.
+* **Clean Code Structure:** Built modular, reusable UI components following clean architectural patterns for readability and scalability.
