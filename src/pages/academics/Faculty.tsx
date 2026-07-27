@@ -12,6 +12,8 @@ import {
   ChevronRight
 } from 'lucide-react';
 
+import { FeatureHighlightSection } from '../../components/FeatureHighlightSection';
+
 interface FacultyMember {
   id: string;
   name: string;
@@ -263,6 +265,7 @@ export const Faculty: React.FC = () => {
             </div>
           ))}
         </div>
+        <FeatureHighlightSection />
 
       </div>
     </div>

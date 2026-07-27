@@ -12,6 +12,8 @@ import {
   Sparkles
 } from 'lucide-react';
 
+import { FeatureHighlightSection } from '../../components/FeatureHighlightSection';
+
 export const AssessmentPolicy: React.FC = () => {
   const [selectedGrade, setSelectedGrade] = useState<'primary' | 'middle' | 'senior'>('primary');
 
@@ -217,6 +219,8 @@ export const AssessmentPolicy: React.FC = () => {
             </table>
           </div>
         </div>
+
+        <FeatureHighlightSection />
 
       </div>
     </div>
