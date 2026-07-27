@@ -7,9 +7,7 @@ import {
   User, 
   GraduationCap, 
   Phone, 
-  Mail, 
-  Sparkles,
-  ShieldCheck
+  Mail,
 } from 'lucide-react';
 
 export const Navbar: React.FC = () => {

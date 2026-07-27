@@ -4,10 +4,7 @@ import {
   User, 
   Clock, 
   ArrowRight, 
-  Tag, 
   Search, 
-  Bookmark, 
-  Share2,
   Sparkles
 } from 'lucide-react';
 

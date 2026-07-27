@@ -1,14 +1,9 @@
 import React from 'react';
 import { 
-  ClipboardCheck, 
-  UserCheck, 
   FileText, 
-  CreditCard, 
   CheckCircle2, 
   ArrowRight, 
-  HelpCircle,
   Sparkles,
-  Calendar
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 

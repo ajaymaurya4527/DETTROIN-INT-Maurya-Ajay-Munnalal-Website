@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { BookOpen, FileCheck, Brain, CheckCircle2, Search, Download } from 'lucide-react';
+import { BookOpen, CheckCircle2, Download } from 'lucide-react';
 
 export const InteractionSyllabus: React.FC = () => {
   const [activeTab, setActiveTab] = useState<'primary' | 'middle' | 'senior'>('primary');

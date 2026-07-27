@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ChevronDown, HelpCircle, Search, Sparkles } from 'lucide-react';
+import { ChevronDown, Search } from 'lucide-react';
 
 interface FaqItem {
   question: string;

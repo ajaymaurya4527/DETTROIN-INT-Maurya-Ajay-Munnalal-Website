@@ -9,7 +9,6 @@ import {
   Star, 
   Users, 
   Briefcase,
-  ChevronRight
 } from 'lucide-react';
 
 import { FeatureHighlightSection } from '../../components/FeatureHighlightSection';

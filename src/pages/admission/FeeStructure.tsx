@@ -1,18 +1,14 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { 
-  CreditCard, 
-  Download, 
-  HelpCircle, 
+  Download,  
   CheckCircle2, 
   AlertTriangle, 
   Bus, 
   Home, 
   Calendar, 
   FileText, 
-  DollarSign, 
   ArrowRight, 
-  Sparkles, 
   ShieldAlert, 
   Clock, 
   Receipt, 
@@ -24,7 +20,6 @@ import { FeatureHighlightSection } from '../../components/FeatureHighlightSectio
 export const FeeStructure: React.FC = () => {
   // Interactive Calculator State
   const [selectedGrade, setSelectedGrade] = useState<'pg_2' | '3_5' | '6_10' | '11_12'>('pg_2');
-  const [includeHostel, setIncludeHostel] = useState<boolean>(false);
   const [selectedTransport, setSelectedTransport] = useState<number>(0);
   const [isNewStudent, setIsNewStudent] = useState<boolean>(true);
 

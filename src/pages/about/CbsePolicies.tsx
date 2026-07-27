@@ -7,7 +7,6 @@ import {
   BookOpen, 
   CheckCircle2, 
   Search,
-  ChevronRight,
   AlertCircle
 } from 'lucide-react';
 

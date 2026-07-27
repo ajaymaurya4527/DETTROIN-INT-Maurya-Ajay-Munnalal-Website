@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+
 import { Link } from 'react-router-dom';
 import { 
   Palette, 
@@ -8,15 +8,13 @@ import {
   HeartHandshake, 
   Globe, 
   ArrowRight, 
-  ChevronRight, 
-  Compass, 
+  ChevronRight,  
   Award, 
   Users, 
   Flame 
 } from 'lucide-react';
 
 export const BeyondAcademics: React.FC = () => {
-  const [activeTab, setActiveTab] = useState<'arts' | 'sports' | 'clubs' | 'outreach'>('arts');
 
   const activities = [
     {

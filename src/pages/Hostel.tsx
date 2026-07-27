@@ -7,19 +7,15 @@ import {
   Clock, 
   Sparkles, 
   Award, 
-  HeartHandshake, 
-  Bed, 
-  Wifi, 
+  HeartHandshake,  
   PhoneCall, 
   ArrowRight,
   ChevronRight,
-  CheckCircle2,
   Quote,
   Compass,
   Check,
   Building2,
   TreePine,
-  UserCheck
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 

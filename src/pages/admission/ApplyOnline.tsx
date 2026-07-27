@@ -1,18 +1,16 @@
 import React, { useState } from 'react';
 import { 
   Send, 
-  User, 
-  Mail, 
+  User,  
   Phone, 
   CheckCircle2, 
   AlertCircle,
   Upload,
-  Calendar,
   X,
   FileText,
   Sparkles,
   ShieldCheck,
-  Image as ImageIcon
+
 } from 'lucide-react';
 
 interface FormFields {

@@ -9,16 +9,11 @@ import {
   Star,
   Bot,
   GraduationCap,
-  Award,
-  Users,
-  Heart,
-  Calendar,
   CheckCircle2,
   ChevronDown,
   Camera,
   Music,
   Dumbbell,
-  Feather
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 

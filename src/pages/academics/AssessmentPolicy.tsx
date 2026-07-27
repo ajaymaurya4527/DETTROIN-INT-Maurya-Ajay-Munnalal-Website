@@ -3,13 +3,8 @@ import {
   FileCheck2, 
   BarChart3, 
   Target, 
-  Layers, 
-  CheckCircle2, 
-  Award, 
-  HelpCircle,
   TrendingUp,
   Brain,
-  Sparkles
 } from 'lucide-react';
 
 import { FeatureHighlightSection } from '../../components/FeatureHighlightSection';

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Lock, Mail, GraduationCap, CheckCircle, AlertCircle, UserCheck, ShieldCheck, School } from 'lucide-react';
+import { Lock, Mail, GraduationCap, CheckCircle, AlertCircle, UserCheck, ShieldCheck, } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 type Role = 'student' | 'parent' | 'staff';

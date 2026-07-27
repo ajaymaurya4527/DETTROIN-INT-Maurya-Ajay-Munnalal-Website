@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Download, FileText, CheckCircle2, BookOpen, ShieldCheck } from 'lucide-react';
+import { Download, CheckCircle2, BookOpen, } from 'lucide-react';
 
 export const DownloadProspectus: React.FC = () => {
   const [downloaded, setDownloaded] = useState(false);

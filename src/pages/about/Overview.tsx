@@ -4,8 +4,7 @@ import {
   Sparkles, 
   Target, 
   Compass, 
-  ShieldCheck, 
-  Users, 
+  ShieldCheck,  
   BookOpen, 
   Flame, 
   HeartHandshake, 
@@ -14,11 +13,8 @@ import {
   Globe2, 
   ArrowRight, 
   Award,
-  Layers,
-  GraduationCap,
   CheckCircle2,
   XCircle,
-  ChevronRight,
   Quote
 } from 'lucide-react';
 

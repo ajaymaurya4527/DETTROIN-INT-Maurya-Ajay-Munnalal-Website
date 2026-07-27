@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Mail, Award, Quote, ChevronRight, UserCheck } from 'lucide-react';
+import { Quote, ChevronRight, UserCheck } from 'lucide-react';
 
 interface CommitteeMember {
   name: string;
