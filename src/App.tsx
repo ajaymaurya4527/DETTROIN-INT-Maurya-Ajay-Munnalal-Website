@@ -8,6 +8,7 @@ import { BeyondAcademics } from './pages/BeyondAcademics';
 import { Hostel } from './pages/Hostel';
 import { Login } from './pages/Login';
 import { NotFound } from './pages/NotFound';
+import { Footer } from './components/Footer';
 
 // Nested About Pages
 import { Overview } from './pages/about/Overview';
@@ -82,9 +83,7 @@ export const App: React.FC = () => {
         </Routes>
       </main>
       
-      <footer className="bg-blue-950 text-gray-400 py-8 text-center text-xs border-t border-blue-900">
-        © 2026 Pavna International School. Built with React & TypeScript.
-      </footer>
+      <Footer/>
     </div>
   );
 };

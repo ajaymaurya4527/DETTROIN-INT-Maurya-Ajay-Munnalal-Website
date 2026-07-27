@@ -11,6 +11,8 @@ import {
   Sparkles
 } from 'lucide-react';
 
+import { FeatureHighlightSection } from '../../components/FeatureHighlightSection';
+
 interface BlogPost {
   id: string;
   title: string;
@@ -253,6 +255,7 @@ export const Blog: React.FC = () => {
             </button>
           </form>
         </div>
+        <FeatureHighlightSection/>
 
       </div>
     </div>

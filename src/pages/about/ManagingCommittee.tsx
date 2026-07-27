@@ -10,6 +10,7 @@ interface CommitteeMember {
   bio: string;
   quote?: string;
 }
+import { FeatureHighlightSection } from '../../components/FeatureHighlightSection';
 
 export const ManagingCommittee: React.FC = () => {
   const [filter, setFilter] = useState<'all' | 'management' | 'academic' | 'parent_rep'>('all');
@@ -181,6 +182,7 @@ export const ManagingCommittee: React.FC = () => {
             </div>
           ))}
         </div>
+        <FeatureHighlightSection/>
 
       </div>
     </div>

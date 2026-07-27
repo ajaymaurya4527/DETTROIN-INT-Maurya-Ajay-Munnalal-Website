@@ -19,6 +19,7 @@ interface DisclosureItem {
   updateDate: string;
   link: string;
 }
+import { FeatureHighlightSection } from '../../components/FeatureHighlightSection';
 
 export const CbsePolicies: React.FC = () => {
   const [activeTab, setActiveTab] = useState<'all' | 'mandatory' | 'academic' | 'infrastructure' | 'safety'>('all');
@@ -282,6 +283,7 @@ export const CbsePolicies: React.FC = () => {
             <span className="font-bold">Notice to Parents & Authorities:</span> Copies of all listed documents are available for inspection in the administrative office of Pavna International School during working hours. For additional clarification regarding CBSE affiliation norms or policy guidelines, please contact our Compliance Officer at <span className="font-bold underline">compliance@pavnaschool.com</span>.
           </div>
         </div>
+        <FeatureHighlightSection/>
 
       </div>
     </div>
