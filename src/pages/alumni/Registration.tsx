@@ -498,7 +498,7 @@ export const Registration: React.FC = () => {
             {/* Footer Institutional Privacy Note */}
             <div className="pt-4 border-t border-slate-800/80 text-center text-[11px] text-slate-500 flex items-center justify-center gap-1.5">
               <ShieldCheck className="w-4 h-4 text-emerald-400 shrink-0" />
-              <span>Data is encrypted and managed according to institutional privacy standards.</span>
+              Data is encrypted and managed according to institutional privacy standards.
             </div>
           </div>
         )}

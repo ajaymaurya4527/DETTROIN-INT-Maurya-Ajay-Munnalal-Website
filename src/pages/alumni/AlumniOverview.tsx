@@ -6,8 +6,7 @@ import {
   Briefcase, 
   Sparkles, 
   Search, 
-  MapPin, 
-  GraduationCap, 
+  MapPin,
   ExternalLink,
   Calendar,
   Building2
